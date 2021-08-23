@@ -13,3 +13,4 @@ Pode também utilizar outros protocolos de mensagens como JSON e XML.
 ### Protocol buffer
 
 Protobuf (sigla de Protocol buffers) é um protocolo de mensagem criado e utilizado pelo Google. Para serializar dados estruturados. É agnóstico de linguagem ou plataforma. Tal como o JSON e o XML.
+
