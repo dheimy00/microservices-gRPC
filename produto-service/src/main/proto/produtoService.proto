@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.dheimy00";
+option java_outer_classname = "ProdutoService";
+option objc_class_prefix = "HLW";
+
+package br.com.dheimy00;
+
+service ProdutoServiceService {
+
+  rpc findAll (Empty) returns (ListaProdutoResponse) {}
+  rpc save (CreateProdutoRequest) returns (ProdutoResponse) {}
+  rpc get (ProdutoRequestId) returns (ProdutoResponse) {}
+  rpc update (UpdateProdutoRequest) returns (ProdutoResponse) {}
+  rpc delete (ProdutoRequestId) returns (Empty) {}
+}
+
+message Empty {}
+
+message CreateProdutoRequest {
+  string identificadorProduto = 1;
+  string nome = 2;
+  double preco = 3;
+  string descricao = 4;
+}
+
+message ProdutoResponse {
+  string idProduto = 1;
+  string identificadorProduto = 2;
+  string nome = 3;
+  double preco = 4;
+  string descricao = 5;
+}
+
+message ListaProdutoResponse {
+  repeated ProdutoResponse produtos = 1;
+}
+
+message UpdateProdutoRequest {
+  string idProduto = 1;
+  string identificadorProduto = 2;
+  string nome = 3;
+  double preco = 4;
+  string descricao = 5;
+}
+
+message ProdutoRequestId {
+  string idProduto = 1;
+}

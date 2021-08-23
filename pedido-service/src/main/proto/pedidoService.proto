@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.dheimy00";
+option java_outer_classname = "PedidoService";
+option objc_class_prefix = "HLW";
+
+package br.com.dheimy00;
+
+service PedidoServiceService {
+
+  rpc findAll (Empty) returns (ListaPedidoResponse) {}
+  rpc save (CreatePedidoRequest) returns (PedidoResponse) {}
+  rpc get (PedidoRequestId) returns (PedidoResponse) {}
+}
+
+message Empty{}
+
+message CreatePedidoRequest {
+  int32 quantidade = 1;
+  Cliente cliente = 2;
+  Produto produto = 3;
+}
+
+message PedidoResponse {
+  string id_pedido = 1;
+  double preco_total = 2;
+  int32 quantidade = 3;
+  string id_cliente = 4;
+  string id_produto = 5;
+}
+
+message ListaPedidoResponse{
+  repeated PedidoResponse pedidos = 1;
+}
+
+message PedidoRequestId{
+  string id_pedido = 1;
+}
+
+message Produto {
+  string id_produto = 1;
+}
+
+message Cliente{
+  string id_cliente = 1;
+}
+

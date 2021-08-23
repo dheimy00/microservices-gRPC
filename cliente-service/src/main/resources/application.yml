@@ -1,0 +1,24 @@
+micronaut:
+  application:
+    name: clienteService
+
+grpc:
+  server:
+    port: 50051
+
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/clienteservice?useSSL=true&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    dialect: MYSQL
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+
+kafka.bootstrap.servers: localhost:9092

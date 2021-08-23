@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.dheimy00";
+option java_outer_classname = "ClienteService";
+option objc_class_prefix = "HLW";
+
+package br.com.dheimy00;
+
+service ClienteServiceService {
+  rpc get (ClienteRequestId) returns (ClienteResponse) {}
+}
+
+message ClienteRequestId {
+  string idCliente = 1;
+}
+
+message ClienteResponse {
+  string idCliente = 1;
+  string nome = 2;
+  string cpf = 3;
+}

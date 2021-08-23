@@ -1,0 +1,9 @@
+micronaut:
+  application:
+    name: pagamentoService
+
+grpc:
+  server:
+    port: 50054
+
+kafka.bootstrap.servers: localhost:9092

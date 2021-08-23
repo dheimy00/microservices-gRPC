@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: produtoService
+
+grpc:
+  server:
+    port: 50052
+
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/produtoservice?useSSL=true&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    dialect: MYSQL
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true

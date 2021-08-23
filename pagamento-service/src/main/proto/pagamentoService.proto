@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.dheimy00";
+option java_outer_classname = "ProdutoService";
+option objc_class_prefix = "HLW";
+
+package br.com.dheimy00;
+
+service PagamentoServiceService {
+  rpc send (PagamentoServiceRequest) returns (ProdutoServiceReply) {}
+}
+
+message PagamentoServiceRequest {
+  string name = 1;
+}
+
+message ProdutoServiceReply {
+  string message = 1;
+}

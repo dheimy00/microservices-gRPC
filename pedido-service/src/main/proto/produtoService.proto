@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.dheimy00";
+option java_outer_classname = "ProdutoService";
+option objc_class_prefix = "HLW";
+
+package br.com.dheimy00;
+
+service ProdutoServiceService {
+  rpc get (ProdutoRequestId) returns (ProdutoResponse) {}
+
+}
+
+message ProdutoRequestId {
+  string idProduto = 1;
+}
+
+message ProdutoResponse {
+  string idProduto = 1;
+  string identificadorProduto = 2;
+  string nome = 3;
+  double preco = 4;
+  string descricao = 5;
+}

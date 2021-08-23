@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.dheimy00";
+option java_outer_classname = "ClienteService";
+option objc_class_prefix = "HLW";
+
+package br.com.dheimy00;
+
+service ClienteServiceService {
+
+  rpc findAll (Empty) returns (ListaClienteResponse) {}
+  rpc save (CreateClienteRequest) returns (ClienteResponse) {}
+  rpc get (ClienteRequestId) returns (ClienteResponse) {}
+  rpc update (UpdateClienteRequest) returns (ClienteResponse) {}
+  rpc delete (ClienteRequestId) returns (Empty) {}
+}
+
+message Empty {}
+
+message CreateClienteRequest {
+  string nome = 1;
+  string cpf = 2;
+}
+
+message ClienteResponse {
+  string idCliente = 1;
+  string nome = 2;
+  string cpf = 3;
+}
+
+message ListaClienteResponse {
+  repeated ClienteResponse clientes = 1;
+}
+
+message UpdateClienteRequest {
+  string idCliente = 1;
+  string nome = 2;
+  string cpf = 3;
+}
+
+message ClienteRequestId {
+  string idCliente = 1;
+}
