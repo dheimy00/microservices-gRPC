@@ -26,5 +26,5 @@ Protobuf (sigla de Protocol buffers) é um protocolo de mensagem criado e utiliz
 - GRPC
 - Insonmnia
 
-![image](https://user-images.githubusercontent.com/33067495/130390269-57b292d9-97eb-4ee4-b563-ab5d409764ff.png)
+![image](https://user-images.githubusercontent.com/33067495/130390461-a1c13900-2173-497b-9548-5c27e6f46154.png)
 
